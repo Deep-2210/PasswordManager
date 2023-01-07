@@ -1,0 +1,100 @@
+a{
+	text-decoration: unset!important;
+}
+body{
+	background-color: #D8D8D8;
+}
+
+/*css start*/
+
+.main_color{
+	background-color: #ed2939; 
+}
+.dropdown_color{
+	background-color: #ed2939;
+}
+.heading{
+	font-size: 32px;
+	font-weight: bolder;
+	text-align: center;
+}
+.s_p_g{
+	font-size: 28px; 
+	color: #ed2939; 
+	font-weight: bold;
+}
+/*Menu CSS*/
+
+li.nav-item{
+	padding-right: 15px!important;
+}
+a.nav-link , .dropdown-item{
+	font-size: 22px;
+}
+
+a.nav-link:hover , .dropdown-item:hover{
+background-color: black !important;
+border-radius: 2px;
+}
+
+a.active{
+	background-color: black;
+	border-radius: 2px;
+}
+
+
+/*Menu Css*/
+
+/*form css*/
+
+.input_field{
+	border-radius: 10px;	
+	border-color: ##B8B8B8;
+}
+
+.input_gap{
+	margin-bottom: 20px;
+}
+.form_heading{
+	font-size: 30px;
+	color: red;
+}
+
+.form_button {
+font-weight: bold;
+border-radius: 15px;
+background: #ed2939;
+border: 0;
+padding: 10px 40px 10px 40px;
+font-size: 19px;
+}
+
+.form_footer{
+	font-size: 16px;
+}
+
+.login_form_border{
+	border: 1px solid #B8B8B8;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 5px 14px 40px 5px rgba(0, 0, 0, 0.2), 5px 15px 20px 5px rgba(0, 0, 0, 0.19);
+	background-color: white;
+}
+
+.login_heading{
+	color: #ed2939;
+	font-weight: bold;
+	font-size: 35px;
+}
+/*form css*/
+
+
+
+/*Footer*/
+
+.footer {
+   background-color: #343434 ;
+   color: white;
+   text-align: center;
+}
+

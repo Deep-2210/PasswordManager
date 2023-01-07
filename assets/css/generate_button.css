@@ -1,0 +1,279 @@
+/*Generate Password Section*/
+ button {
+   border: 0;
+   outline: 0;
+}
+ .containerss {
+
+   padding: 10px 25px;
+   background: none;
+}
+ .containerss h2.title {
+   font-size: 1.75rem;
+   margin: 10px -5px;
+   margin-bottom: 30px;
+   color: black;
+}
+ .result {
+   position: relative;
+   width: 100%;
+   height: 65px;
+   overflow: hidden;
+}
+ .result__info {
+   position: absolute;
+   bottom: 4px;
+   color: black;
+   font-size: 0.8rem;
+   transition: all 150ms ease-in-out;
+   transform: translateY(200%);
+   opacity: 0;
+}
+ .result__info.right {
+   right: 8px;
+}
+ .result__info.left {
+   left: 8px;
+}
+ .result__viewbox {
+   width: 100%;
+   height: 100%;
+   background: #C8C8C8;
+   border-color: grey;
+   border: 1px solid;
+   border-radius: 8px;
+   color: black;
+   text-align: center;
+   line-height: 65px;
+}
+ .result #copy-btn {
+   position: absolute;
+   top: var(--y);
+   left: var(--x);
+   width: 38px;
+   height: 38px;
+   background: white;
+   border-radius: 50%;
+   opacity: 0;
+   transform: translate(-50%, -50%) scale(0);
+   transition: all 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   cursor: pointer;
+   z-index: 2;
+}
+ .result #copy-btn:active {
+   box-shadow: 0 0 0 200px rgba(255, 255, 255, 0.08);
+}
+ .result:hover #copy-btn {
+   opacity: 1;
+   transform: translate(-50%, -50%) scale(1.35);
+}
+ .field-title {
+   position: absolute;
+   top: -10px;
+   left: 8px;
+   transform: translateY(-50%);
+   font-weight: 700;
+   color: black;
+   text-transform: uppercase;
+   font-size: 0.9rem;
+   padding-bottom: 10px;
+   pointer-events: none;
+   user-select: none;
+}
+ .options {
+   width: 100%;
+   height: auto;
+   margin: 50px 0;
+}
+ .range__slider {
+   position: relative;
+   width: 100%;
+   height: calc(65px - 10px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(255, 255, 255, 0.08);
+   border-radius: 8px;
+   margin: 30px 0;
+}
+ .range__slider::before, .range__slider::after {
+   position: absolute;
+   color: black;
+   font-size: 1.1rem;
+   font-weight: bold;
+}
+ .range__slider::before {
+   content: attr(data-min);
+   left: 10px;
+}
+ .range__slider::after {
+   content: attr(data-max);
+   right: 10px;
+}
+ .range__slider .length__title::after {
+   content: attr(data-length);
+   position: absolute;
+   right: -16px;
+   font-variant-numeric: tabular-nums;
+   color: black;
+}
+ #slider {
+   -webkit-appearance: none;
+   width: calc(100% - (70px));
+   height: 5px;
+   border-radius: 5px;
+   background: red;
+   outline: none;
+   padding: 0;
+   margin: 0;
+   cursor: pointer;
+}
+ #slider::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background: black;
+   cursor: pointer;
+   transition: all 0.15s ease-in-out;
+}
+ #slider::-webkit-slider-thumb:hover {
+   background: black;
+   transform: scale(1.2);
+}
+ #slider::-moz-range-thumb {
+   width: 20px;
+   height: 20px;
+   border: 0;
+   border-radius: 50%;
+   background: black;
+   cursor: pointer;
+   transition: background 0.15s ease-in-out;
+}
+ #slider::-moz-range-thumb:hover {
+   background: black;
+}
+ .settings {
+   position: relative;
+   height: auto;
+   widows: 100%;
+   display: flex;
+   flex-direction: column;
+}
+ .settings .setting {
+   position: relative;
+   width: 100%;
+   height: calc(65px - 10px);
+   background-color: #ffdad9;
+   border: 1px solid;
+   border-color: #ff726f;
+   border-radius: 8px;
+   display: flex;
+   align-items: center;
+   padding: 10px 25px;
+   color: black;
+   margin-bottom: 8px;
+}
+ .settings .setting input {
+   opacity: 0;
+   position: absolute;
+}
+ .settings .setting input + label {
+   user-select: none;
+}
+ .settings .setting input + label::before, .settings .setting input + label::after {
+   content: "";
+   position: absolute;
+   transition: 150ms cubic-bezier(0.24, 0, 0.5, 1);
+   transform: translateY(-50%);
+   top: 50%;
+   right: 10px;
+   cursor: pointer;
+}
+ .settings .setting input + label::before {
+   height: 30px;
+   width: 50px;
+   border-radius: 30px;
+   background: grey;
+}
+ .settings .setting input + label::after {
+   height: 24px;
+   width: 24px;
+   border-radius: 60px;
+   right: 32px;
+   background: white;
+}
+ .settings .setting input:checked + label:before {
+   background: #ed3929;
+   transition: all 150ms cubic-bezier(0, 0, 0, 0.1);
+}
+ .settings .setting input:checked + label:after {
+   right: 14px;
+}
+ .settings .setting input:focus + label:before {
+   box-shadow: 0 0 0 2px #ed3929;
+}
+ .settings .setting input:disabled + label:before, .settings .setting input:disabled + label:after {
+   cursor: not-allowed;
+}
+ .settings .setting input:disabled + label:before {
+   background: #ed3929;
+}
+ .settings .setting input:disabled + label:after {
+   background: #fff;
+}
+ .btn.generate {
+   user-select: none;
+   position: relative;
+   width: 100%;
+   height: 50px;
+   margin: 10px 0;
+   border-radius: 8px;
+   color: white;
+   border: none;
+   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+   letter-spacing: 1px;
+   font-weight: bold;
+   text-transform: uppercase;
+   cursor: pointer;
+   transition: all 150ms ease;
+}
+ .btn.generate:active {
+   transform: translateY(-3%);
+   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);
+} 
+
+
+/*Generate Button*/
+
+/*both home page box CSS*/
+
+.heading2{
+	background-color: #ed2939; 
+	font-size: 32px;
+	font-weight: bolder;
+}
+
+.list-group-item{
+	border: unset;
+}
+.list li.list-group-item{
+	background-color: unset;
+	padding: 0px 0px 0px 25px !important;
+}
+
+.list li::before {content: "•"; color: black;font-weight: bolder;font-size: 25px;
+  display: inline-block; width: 1em;
+  margin-left: -1em
+}
+
+.border_round1{
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px; 
+}
+.border_round2{
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px; 
+}
+
+/*both home page box CSS*/
